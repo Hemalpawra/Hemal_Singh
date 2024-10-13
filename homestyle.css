@@ -1,0 +1,203 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body, html {
+    height: 100vh;
+}
+
+body{
+    background-image: url('bg.jpg');
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    background-repeat: no-repeat;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    overflow: hidden;
+}
+
+form{
+    width: 100%;
+}
+
+.background-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    background: rgba(255, 255, 255, 0.4);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    backdrop-filter: blur(16px);
+    width: 25%;
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #a53b1f;
+}
+
+.login-container input {
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    width: 80%;
+}
+
+.login-container button {
+    width:80%;
+    padding: 12px;
+    background-color: #a53b1f;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.login-container button:hover {
+    background-color: #9b371d;
+}
+
+.links {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.links a {
+    color: #a53b1f;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+.girl{
+    background-image: url('girl.png');
+    width: 100vw;
+    height: 300px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    top: -500px;
+    left: -600px;
+    /* display: inline; */
+    position: relative;
+    z-index: -1;
+    animation:move_right 8s linear infinite ;	
+}
+
+.foreground{
+    position: relative;
+    background-image: url('trees.png');
+    width: 100%;
+    height: 100%;
+    top: -132.9%;
+    background-position:bottom;
+    background-size:cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+    
+    
+}
+
+.leaf{
+    width: 100px;
+    height: 100px;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index:-1;
+    animation: move_down 10s ease-out -10s infinite;
+}
+
+.leaf1,.leaf1-2{
+    background-image: url('leaf_01.png');
+    top: -1800px;
+    left: 180px;
+    animation-duration: 14s;
+}
+
+.leaf2,.leaf2-2{
+    background-image: url('leaf_02.png');
+    top: -1800px;
+    left: 180px;
+    animation-duration: 20s;
+    
+}
+
+.leaf3,.leaf3-2{
+    background-image: url('leaf_03.png');
+    top: -1800px;
+    left: 30px;
+    animation-duration: 10s;
+}
+  
+.leaf4,.leaf4-2{
+    background-image: url('leaf_04.png');
+    top: -2000px;
+    left: 600px;
+    z-index: 1;
+}
+
+.leaf1-2{
+    top: -2200px;
+    left: 800px;
+    z-index: 1;
+    animation: move_down 8s linear -.5s infinite;
+}
+
+.leaf2-2{
+    top: -2200px;
+    left: 900px;
+    animation: move_down 14s linear  infinite;
+}
+
+.leaf3-2{
+    top: -2200px;
+    left: 1000px;
+    animation: move_down 10s linear  infinite;
+}
+
+.leaf4-2{
+    top: -2200px;
+    left: 1400px;
+    animation: move_down 12s linear infinite;
+}
+  @keyframes move_left
+  	{
+  		0%{transform:translateX(100%);}
+  		100%{transform:translateX(-300px);}
+  	}
+
+@keyframes move_right{
+    0%{transform: scaleX(-1) translateX(300px) ;}
+    100%{transform: scaleX(-1) translateX(-100%);}
+}
+
+@keyframes move_down{
+    0%{transform: translateY(0px);}
+    0%{transform: rotate(90deg);}
+    100%{transform: rotate(0deg);}
+    100%{transform: translateY(100vh);}
+}
